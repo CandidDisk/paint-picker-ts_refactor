@@ -1,26 +1,29 @@
 import React from 'react';
 import logo from './logo.svg';
+import styled from "@emotion/styled";
+import {css} from "@emotion/react";
+
+
 import './App.css';
+import MainImgComponent from "./components/MainImgComponent";
+import ColourDrawerComponent from "./components/ColourDrawerComponent";
+
+const Container = styled('div')`
+`;
+
+const Column = styled('div')`
+    text-align: center;
+`;
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Container>
+            <ColourDrawerComponent/>
+            <Column>
+                <MainImgComponent backgroundColor={'#FFFFFF'}/>
+            </Column>
+        </Container>
+    );
 }
 
 export default App;

@@ -1,0 +1,10 @@
+.fadeOut{
+    opacity:0;
+    width:0;
+    height:0;
+}
+.fadeIn{
+    opacity:1;
+    width:50px;
+    height:70px;
+}
