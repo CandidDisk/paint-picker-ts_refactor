@@ -7,6 +7,7 @@ import {css} from "@emotion/react";
 import './App.css';
 import MainImgComponent from "./components/MainImgComponent";
 import ColourDrawerComponent from "./components/ColourDrawerComponent";
+import ColourPickerComponent from "./components/ColourPickerComponent";
 
 const Container = styled('div')`
 `;
@@ -21,6 +22,9 @@ function App() {
             <ColourDrawerComponent/>
             <Column>
                 <MainImgComponent backgroundColor={'#FFFFFF'}/>
+            </Column>
+            <Column>
+                <ColourPickerComponent/>
             </Column>
         </Container>
     );
