@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import styled from "@emotion/styled";
 import {css} from "@emotion/react";
 
+import './hideScrollbar.css';
 
 import './App.css';
 import MainImgComponent from "./components/MainImgComponent";
@@ -17,14 +18,21 @@ const Column = styled('div')`
 `;
 
 function App() {
+
+    const [backgroundColor, setBackgroundColor] = useState('#FFFFFF');
+
+    const setColor = (color: string) => {
+        setBackgroundColor(color);
+    }
+
     return (
         <Container>
             <ColourDrawerComponent/>
             <Column>
-                <MainImgComponent backgroundColor={'#FFFFFF'}/>
+                <MainImgComponent backgroundColor={backgroundColor}/>
             </Column>
             <Column>
-                <ColourPickerComponent/>
+                <ColourPickerComponent color={backgroundColor} setColor={(backgroundColor) => setColor(backgroundColor)}/>
             </Column>
         </Container>
     );

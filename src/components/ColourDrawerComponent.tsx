@@ -18,7 +18,7 @@ import './components.css';
 type Anchor = 'top' | 'left' | 'bottom' | 'right';
 
 const Container = styled('div')`
-    margin-top: 15px;
+    margin-top: 0px;
     margin-left: 25px;
 `;
 
@@ -81,7 +81,7 @@ export default function ColourDrawerComponent() {
     return (
         <Container>
             <React.Fragment>
-                <IconButton style={{transition: 'width 0.1s 0.1s, height 0.3s 0.3s, opacity 0.8s ease-in-out'}}
+                <IconButton style={{color: '#7a7d7b', transition: 'width 0.1s 0.1s, height 0.3s 0.3s, opacity 0.8s ease-in-out'}}
                             className={burgerVisible?'fadeIn':'fadeOut'}
                             onClick={toggleDrawer('left', true)}
                             disableRipple={true}
