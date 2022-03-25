@@ -1,19 +1,15 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
-import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+import Grid from '@mui/material/Grid';
 import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from '@mui/material/IconButton';
 import styled from "@emotion/styled";
+import TextField from '@mui/material/TextField';
 
 import './components.css';
+import Paper from "@mui/material/Paper";
+import {ColourType} from "../models/ColourType";
 
 type Anchor = 'top' | 'left' | 'bottom' | 'right';
 
@@ -22,7 +18,12 @@ const Container = styled('div')`
     margin-left: 25px;
 `;
 
-export default function ColourDrawerComponent() {
+interface ColourDrawerComponentProps {
+    setDummyData: (color: ColourType) => void
+}
+
+
+const ColourDrawerComponent: React.FC<ColourDrawerComponentProps> = ({setDummyData}) => {
     const [state, setState] = React.useState({
         top: false,
         left: false,
@@ -49,32 +50,177 @@ export default function ColourDrawerComponent() {
 
     const list = (anchor: Anchor) => (
         <Box
-            sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+            sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 350}}
             role="presentation"
-            onClick={toggleDrawer(anchor, false)}
-            onKeyDown={toggleDrawer(anchor, false)}
         >
-            <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>
-                            {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                        </ListItemIcon>
-                        <ListItemText primary={text} />
-                    </ListItem>
-                ))}
-            </List>
-            <Divider />
-            <List>
-                {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                    <ListItem button key={text}>
-                        <ListItemIcon>
-                            {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                        </ListItemIcon>
-                        <ListItemText primary={text} />
-                    </ListItem>
-                ))}
-            </List>
+            <Box
+                component="form"
+                sx={{
+                    '& > :not(style)': { m: 1, width: '40ch'},
+                }}
+                noValidate
+                autoComplete="off"
+            >
+            </Box>
+            <TextField sx={{width: '250px', marginLeft: '50px', marginTop: '30px', marginBottom: '30px'}} id="outlined-basic" size="small" label="Search colors" variant="outlined" />
+            <Grid container rowSpacing={1} columnSpacing={{ xs: 2, sm: 2, md: 0 }}>
+                <Grid item xs={6} onClick={() => setDummyData(ColourType.RED)}>
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            flexWrap: 'wrap',
+                            '& > :not(style)': {
+                                m: 1,
+                                width: 120,
+                                height: 120,
+                                marginTop: 2,
+                                marginLeft: 5,
+                                backgroundColor: '#FF0000',
+                            },
+                        }}
+                    >
+
+                        <Paper />
+
+                    </Box>
+                </Grid>
+                <Grid item xs={6}>
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            flexWrap: 'wrap',
+                            '& > :not(style)': {
+                                m: 1,
+                                width: 120,
+                                height: 120,
+                                marginTop: 2,
+                                backgroundColor: '#FFA500',
+                            },
+                        }}
+                    >
+
+                        <Paper/>
+
+                    </Box>
+                </Grid>
+                <Grid item xs={6}>
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            flexWrap: 'wrap',
+                            '& > :not(style)': {
+                                m: 1,
+                                width: 120,
+                                height: 120,
+                                marginTop: 2,
+                                marginLeft: 5,
+                                backgroundColor: '#FFFF00',
+                            },
+                        }}
+                    >
+
+                        <Paper/>
+
+                    </Box>
+                </Grid>
+                <Grid item xs={6}>
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            flexWrap: 'wrap',
+                            '& > :not(style)': {
+                                m: 1,
+                                width: 120,
+                                height: 120,
+                                marginTop: 2,
+                                backgroundColor: '#00FF00',
+                            },
+                        }}
+                    >
+
+                        <Paper/>
+
+                    </Box>
+                </Grid>
+                <Grid item xs={6} onClick={() => setDummyData(ColourType.BLUE)}>
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            flexWrap: 'wrap',
+                            '& > :not(style)': {
+                                m: 1,
+                                width: 120,
+                                height: 120,
+                                marginTop: 2,
+                                marginLeft: 5,
+                                backgroundColor: '#0000FF',
+                            },
+                        }}
+                    >
+
+                        <Paper />
+
+                    </Box>
+                </Grid>
+                <Grid item xs={6}>
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            flexWrap: 'wrap',
+                            '& > :not(style)': {
+                                m: 1,
+                                width: 120,
+                                height: 120,
+                                marginTop: 2,
+                                backgroundColor: '#000000',
+                            },
+                        }}
+                    >
+
+                        <Paper/>
+
+                    </Box>
+                </Grid>
+                <Grid item xs={6}>
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            flexWrap: 'wrap',
+                            '& > :not(style)': {
+                                m: 1,
+                                width: 120,
+                                height: 120,
+                                marginTop: 2,
+                                marginLeft: 5,
+                                backgroundColor: '#FFA500',
+                            },
+                        }}
+                    >
+
+                        <Paper/>
+
+                    </Box>
+                </Grid>
+                <Grid item xs={6}>
+                    <Box
+                        sx={{
+                            display: 'flex',
+                            flexWrap: 'wrap',
+                            '& > :not(style)': {
+                                m: 1,
+                                width: 120,
+                                height: 120,
+                                marginTop: 2,
+                                backgroundColor: '#FFA500',
+                            },
+                        }}
+                    >
+
+                        <Paper/>
+
+                    </Box>
+                </Grid>
+            </Grid>
         </Box>
     );
 
@@ -99,3 +245,5 @@ export default function ColourDrawerComponent() {
         </Container>
     );
 }
+
+export default ColourDrawerComponent;
