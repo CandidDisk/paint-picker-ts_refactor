@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/CandidDisk.github.io/static/css/main.8d8e777b.css",
+    "main.js": "/CandidDisk.github.io/static/js/main.68190590.js",
+    "static/js/787.50eec82f.chunk.js": "/CandidDisk.github.io/static/js/787.50eec82f.chunk.js",
+    "index.html": "/CandidDisk.github.io/index.html",
+    "main.8d8e777b.css.map": "/CandidDisk.github.io/static/css/main.8d8e777b.css.map",
+    "main.68190590.js.map": "/CandidDisk.github.io/static/js/main.68190590.js.map",
+    "787.50eec82f.chunk.js.map": "/CandidDisk.github.io/static/js/787.50eec82f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8d8e777b.css",
+    "static/js/main.68190590.js"
+  ]
+}
