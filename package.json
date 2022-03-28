@@ -2,7 +2,7 @@
   "name": "paint-picker-ts_refactor",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://candiddisk.github.io",
+  "homepage": "https://candiddisk.github.io/",
   "dependencies": {
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
