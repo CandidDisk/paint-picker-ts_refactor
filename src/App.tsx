@@ -60,6 +60,41 @@ function App() {
             name: "SKY",
             colour: "#87ceeb",
             category: ColourType.BLUE
+        },
+        {
+            name: "TEAL",
+            colour: "#008080",
+            category: ColourType.BLUE
+        },
+        {
+            name: "AQUA",
+            colour: "#00FFFF",
+            category: ColourType.BLUE
+        },
+        {
+            name: "STEEL",
+            colour: "#4682B4",
+            category: ColourType.BLUE
+        },
+        {
+            name: "CORN FLOWER",
+            colour: "#6495ED",
+            category: ColourType.BLUE
+        },
+        {
+            name: "MIDNIGHT",
+            colour: "#191970",
+            category: ColourType.BLUE
+        },
+        {
+            name: "CADET",
+            colour: "#5F9EA0",
+            category: ColourType.BLUE
+        },
+        {
+            name: "DODGER",
+            colour: "#1E90FF",
+            category: ColourType.BLUE
         }
     ]
 
@@ -97,6 +132,41 @@ function App() {
         {
             name: "SANGRIA",
             colour: "#5E1916",
+            category: ColourType.RED
+        },
+        {
+            name: "SALMON",
+            colour: "#FA8072",
+            category: ColourType.RED
+        },
+        {
+            name: "DARK SALMON",
+            colour: "#E9967A",
+            category: ColourType.RED
+        },
+        {
+            name: "LIGHT CORAL",
+            colour: "#F08080",
+            category: ColourType.RED
+        },
+        {
+            name: "TOMATO",
+            colour: "#FF6347",
+            category: ColourType.RED
+        },
+        {
+            name: "RED",
+            colour: "#FF0000",
+            category: ColourType.RED
+        },
+        {
+            name: "LIGHT SALMON",
+            colour: "#FFA07A",
+            category: ColourType.RED
+        },
+        {
+            name: "FIRE BRICK",
+            colour: "#B22222",
             category: ColourType.RED
         }
     ]
