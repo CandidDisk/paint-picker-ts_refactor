@@ -13,7 +13,7 @@ const Container = styled('div')`
 const MainImgComponent: React.FC<MainImgComponentProps> = (props) => {
     return (
         <Container>
-            <img style={{height: '40%', width: '50%', backgroundColor: props.backgroundColor}}
+            <img style={{height: '40%', width: '45%', backgroundColor: props.backgroundColor}}
                  src={"https://design.plyboo.com/wp-content/uploads/2017/04/room-2-1.png"}/>
         </Container>
     );
